@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mathlete 28 - 28-Day Core Math Challenge</title>
+  <meta name="description" content="Help your child master addition, subtraction, multiplication, and division in just 15 minutes a day. A 28-day challenge for parents and teachers.">
+  <meta name="keywords" content="math challenge, homeschool math, math worksheets, fluency, addition subtraction, multiplication division, math drills, sports math">
+  <meta name="author" content="Mathlete 28">
+  <meta property="og:title" content="Mathlete 28 - 28-Day Math Mastery Challenge">
+  <meta property="og:description" content="Master math with speed and confidence. A time-tested system for any grade level. 15 minutes a day.">
+  <meta property="og:image" content="/assets/share-image.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Mathlete 28</h1>
+  <p class="tagline">Unlock the Core 4 with 15 Minutes a Day</p>
+</header>
+
+<section class="hero">
+  <h2>Start the Challenge</h2>
+
+  <div class="cta-buttons">
+    <button class="cta-button" onclick="document.getElementById('form').scrollIntoView({ behavior: 'smooth' });">🎯 Try Day 1 Free</button>
+    <button class="cta-button" onclick="document.getElementById('form').scrollIntoView({ behavior: 'smooth' });">🏁 Join the 28-Day Challenge</button>
+  </div>
+
+  <p><strong>The root of math fatigue is delayed recall of the Core 4: addition, subtraction, multiplication, and division.</strong> This program complements your existing curriculum by building speed and confidence through daily rapid-fire drills—a compounding time saver.</p>
+  <p>Choose your child’s favorite sport and tell us who you are—we’ll send a customized workbook straight to your inbox.</p>
+
+  <form id="form" action="/subscribe" method="POST">
+    <input type="text" name="first_name" placeholder="First Name" required />
+    <input type="text" name="last_name" placeholder="Last Name" required />
+    <input type="email" name="email" placeholder="Email Address" required />
+
+    <label for="sport">Pick your youth's favorite sport:</label>
+    <select name="sport" id="sport" required>
+      <option value="">Choose one</option>
+      <option value="baseball">⚾ Baseball</option>
+      <option value="football">🏈 Football</option>
+      <option value="basketball">🏀 Basketball</option>
+      <option value="hockey">🏒 Hockey</option>
+      <option value="track_and_field">👟 Track & Field</option>
+      <option value="tennis">🎾 Tennis</option>
+      <option value="soccer">⚽ Soccer</option>
+    </select>
+
+    <label for="role">I am a:</label>
+    <select name="role" id="role" required>
+      <option value="">Choose one</option>
+      <option value="parent">Parent</option>
+      <option value="teacher">Teacher</option>
+      <option value="organization">School / District Admin</option>
+    </select>
+
+    <button type="submit">Send Me Day 1</button>
+  </form>
+</section>
+
+<section class="audience-options">
+  <h3>Who Is Mathlete 28 For?</h3>
+  <ul>
+    <li><strong>✔ Parents</strong> – Make math engaging at home with sport-themed mastery drills</li>
+    <li><strong>✔ Teachers</strong> – Build your own daily fluency block, no prep needed</li>
+    <li><strong>✔ Schools</strong> – License full curriculum access for all classrooms</li>
+  </ul>
+</section>
+
+<section class="features">
+  <h3>Why It Works</h3>
+  <ul>
+    <li>✔ 28-day sports-themed math fluency challenge</li>
+    <li>✔ Works for classrooms, small groups, or homeschool</li>
+    <li>✔ Designed to support all levels—from struggling to gifted</li>
+    <li>✔ Affiliate-friendly for educators and parent communities</li>
+  </ul>
+</section>
+
+<section class="testimonial">
+  <blockquote>
+    “My entire class leveled up their math fluency. Even my most reluctant learners ask for more!”<br>
+    <span>- 4th Grade Teacher, Arkansas</span>
+  </blockquote>
+</section>
+
+<section class="affiliate-promo">
+  <h3>Want to Earn with Mathlete 28?</h3>
+  <p>Join our referral system and get paid when someone joins from your link. <a href="/affiliates.html">Become an affiliate</a>.</p>
+</section>
+
+<section class="community-invite">
+  <p>🎯 <strong>Join our Community Discord!</strong> Share student wins, request new features, and be part of our growing group of educators and parents. Our product team turns feedback into real-time improvements.</p>
+</section>
+
+<footer>
+  <p>© 2024 Mathlete 28 • <a href="mailto:support@mathlete28.com">support@mathlete28.com</a></p>
+</footer>
+
+<script>
+  const ref = new URLSearchParams(window.location.search).get('ref');
+  if (ref) localStorage.setItem('mathlete_ref', ref);
+</script>
+
+</body>
+</html>
+
+
+
+
+
