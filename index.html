@@ -32,7 +32,7 @@
 
   <form id="form" action="https://formsubmit.co/mathletics28@gmail.com" method="POST">
     <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_next" value="https://mathletics28.onrender.com/thankyou.html">
+    <input type="hidden" name="_next" id="nextRedirect" />
 
     <input type="text" name="first_name" placeholder="First Name" required />
     <input type="text" name="last_name" placeholder="Last Name" required />
@@ -59,6 +59,13 @@
     </select>
 
     <button type="submit">Send Me Day 1</button>
+
+    <script>
+      document.getElementById('form').addEventListener('submit', function () {
+        const sport = document.getElementById('sport').value;
+        document.getElementById('nextRedirect').value = `https://mathletics28.onrender.com/thankyou.html?sport=${encodeURIComponent(sport)}`;
+      });
+    </script>
   </form>
 </section>
 
