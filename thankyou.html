@@ -2,32 +2,55 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Thank You - Mathletics 28</title>
   <link rel="stylesheet" href="style.css" />
+  <script>
+    function getSportName() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const sport = urlParams.get('sport');
+      const sportNames = {
+        baseball: "Baseball",
+        football: "Football",
+        basketball: "Basketball",
+        hockey: "Hockey",
+        track_and_field: "Track & Field",
+        tennis: "Tennis",
+        soccer: "Soccer"
+      };
+      return sportNames[sport] || "Your Sport";
+    }
+
+    window.onload = function () {
+      const sportHeader = document.getElementById("sport-title");
+      const sportDownload = document.getElementById("sport-download");
+      const sportName = getSportName();
+
+      sportHeader.innerText = `Thanks for joining the ${sportName} Challenge!`;
+      sportDownload.innerText = `Download Your ${sportName} Day 1 Pack`;
+      sportDownload.href = `/pdfs/${sportName.toLowerCase().replace(/ /g, '_')}_day1.pdf`;
+    };
+  </script>
 </head>
 <body>
 
 <header>
-  <h1>You're In, Team Mathlete!</h1>
+  <h1 id="sport-title">Thanks for joining the Challenge!</h1>
   <p class="tagline">Let’s build speed, confidence, and math fluency — one drill at a time.</p>
 </header>
 
 <section class="hero">
-  <h2>Download Your Day 1 Pack</h2>
-  <p>Select the sport theme your student picked and get started right away!</p>
+  <h2 id="sport-download">Download Your Day 1 Pack</h2>
+  <p>We’re excited to see your student in action. The journey ahead will be full of confidence boosts, measurable growth, and momentum in math. 
+  You’ve taken the first step — and the difference will be visible in just days.</p>
 
   <div class="cta-buttons">
-    <a href="/pdfs/baseball_day1.pdf" class="cta-button" download>⚾ Baseball</a>
-    <a href="/pdfs/football_day1.pdf" class="cta-button" download>🏈 Football</a>
-    <a href="/pdfs/basketball_day1.pdf" class="cta-button" download>🏀 Basketball</a>
-    <a href="/pdfs/hockey_day1.pdf" class="cta-button" download>🏒 Hockey</a>
-    <a href="/pdfs/track_day1.pdf" class="cta-button" download>👟 Track & Field</a>
-    <a href="/pdfs/tennis_day1.pdf" class="cta-button" download>🎾 Tennis</a>
-    <a href="/pdfs/soccer_day1.pdf" class="cta-button" download>⚽ Soccer</a>
+    <a id="sport-download" class="cta-button" download>📥 Download Now</a>
   </div>
 
-  <p>💬 Have feedback or questions? Join our <a href="https://discord.gg/your-server" target="_blank" style="color:#ffaa66;text-decoration:underline;">Community Discord</a> and help shape the next generation of Mathletes!</p>
+  <p style="margin-top: 2rem; font-style: italic; color: #ffaa66;">
+    “That which gets measured, will by sheer focus improve.”
+  </p>
 </section>
 
 <footer>
