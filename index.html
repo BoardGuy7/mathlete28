@@ -6,78 +6,66 @@
   <title>Mathletics 28 – Master the Core 4</title>
   <link rel="stylesheet" href="style.css" />
   <script type="text/javascript">
-    /** This section is only needed once per page if manually copying **/
-    if (typeof MauticSDKLoaded == 'undefined') {
-        var MauticSDKLoaded = true;
-        var head            = document.getElementsByTagName('head')[0];
-        var script          = document.createElement('script');
-        script.type         = 'text/javascript';
-        script.src          = 'https://crm.mathletics28.com/media/js/mautic-form.js';
-        script.onload       = function() {
-            MauticSDK.onLoad();
-        };
-        head.appendChild(script);
-        var MauticDomain = 'https://crm.mathletics28.com';
-        var MauticLang   = {
-            'submittingMessage': "Please wait..."
-        };
-    } else if (typeof MauticSDK != 'undefined') {
-        MauticSDK.onLoad();
+    // Exit intent detection
+    let exitIntentShown = false;
+    document.addEventListener("mouseout", function (e) {
+      if (!exitIntentShown && e.clientY < 10) {
+        document.getElementById("exit-popup").style.display = "block";
+        exitIntentShown = true;
+      }
+    });
+    function closePopup() {
+      document.getElementById("exit-popup").style.display = "none";
     }
   </script>
+  <style>
+    #exit-popup {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      z-index: 9999;
+      justify-content: center;
+      align-items: center;
+    }
+    #exit-popup-content {
+      background: white;
+      padding: 2rem;
+      max-width: 500px;
+      text-align: center;
+      border-radius: 8px;
+    }
+    #exit-popup-content button {
+      margin-top: 1rem;
+    }
+  </style>
 </head>
 <body>
+  <div id="exit-popup">
+    <div id="exit-popup-content">
+      <h2>Wait! Want to try before you buy?</h2>
+      <p>Grab your free 1-day trial and experience Mathletics 28 firsthand.</p>
+      <a href="https://mathletics28.com/#signup" class="cta-button">Try 1 Day Free</a><br />
+      <button onclick="closePopup()">No thanks</button>
+    </div>
+  </div>
+
   <header>
     <h1>Mathletics 28</h1>
     <p class="tagline">Where speed and confidence in math come to play</p>
+    <div class="cta-priority">
+      <a class="cta-button main-cta" href="https://buymathletics28.lemonsqueezy.com/checkout/core-4-math-mastery-bundle" target="_blank">🎯 Join Now – Core 4 Bundle ($49.99)</a>
+      <p class="alt-option">Not ready yet? <a href="#signup">Try 1 Day Free</a></p>
+    </div>
   </header>
 
   <section class="hero">
     <h2>The root of math fatigue is slow recall of the core four.</h2>
-    <p>This program compliments any curriculum by building speed and confidence in the fundamentals—addition, subtraction, multiplication, and division.</p>
+    <p>This program complements any curriculum by building speed and confidence in the fundamentals—addition, subtraction, multiplication, and division.</p>
     <p>Give your student the advantage of rapid-fire fluency. This is a compounding time saver.</p>
-
-    <div id="mauticform_wrapper_addition28clean" class="mauticform_wrapper">
-      <form autocomplete="false" role="form" method="post" action="https://crm.mathletics28.com/form/submit?formId=2" id="mauticform_addition28clean" data-mautic-form="addition28clean" enctype="multipart/form-data">
-        <div class="mauticform-error" id="mauticform_addition28clean_error"></div>
-        <div class="mauticform-message" id="mauticform_addition28clean_message"></div>
-        <div class="mauticform-innerform">
-          <div class="mauticform-row">
-            <input type="text" name="mauticform[first_name]" value="" id="mauticform_input_addition28clean_first_name" placeholder="First Name" class="mauticform-input" required />
-          </div>
-          <div class="mauticform-row">
-            <input type="text" name="mauticform[last_name]" value="" id="mauticform_input_addition28clean_last_name" placeholder="Last Name" class="mauticform-input" required />
-          </div>
-          <div class="mauticform-row">
-            <input type="email" name="mauticform[email]" value="" id="mauticform_input_addition28clean_email" placeholder="Email Address" class="mauticform-input" required />
-          </div>
-          <div class="mauticform-row">
-            <select name="mauticform[sport]" id="mauticform_input_addition28clean_sport" class="mauticform-selectbox" required>
-              <option value="">Select Your Sport</option>
-              <option value="Baseball">Baseball</option>
-              <option value="Football">Football</option>
-              <option value="Basketball">Basketball</option>
-              <option value="Hockey">Hockey</option>
-              <option value="Soccer">Soccer</option>
-              <option value="Tennis">Tennis</option>
-              <option value="Track and Field">Track and Field</option>
-            </select>
-          </div>
-
-          <input type="hidden" name="mauticform[formId]" id="mauticform_addition28clean_id" value="2" />
-          <input type="hidden" name="mauticform[return]" id="mauticform_addition28clean_return" value="https://mathletics28.com/thankyou.html" />
-          <input type="hidden" name="mauticform[formName]" id="mauticform_addition28clean_name" value="addition28clean" />
-
-          <div class="mauticform-row">
-            <button type="submit" name="mauticform[submit]" value="1" id="mauticform_input_addition28clean_submit" class="mauticform-button btn btn-default">Start Free Trial</button>
-          </div>
-        </div>
-      </form>
-    </div>
-
-    <div class="cta-buttons">
-      <button class="cta-button">Check Out Now</button>
-    </div>
   </section>
 
   <section class="features">
@@ -115,5 +103,4 @@
   </footer>
 </body>
 </html>
-
 
