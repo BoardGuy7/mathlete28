@@ -5,6 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mathletics 28 – Master the Core 4</title>
   <link rel="stylesheet" href="style.css" />
+  <script type="text/javascript">
+    if (typeof MauticSDKLoaded == 'undefined') {
+        var MauticSDKLoaded = true;
+        var head            = document.getElementsByTagName('head')[0];
+        var script          = document.createElement('script');
+        script.type         = 'text/javascript';
+        script.src          = 'http://crm.mathletics28.com/media/js/mautic-form.js?vd994be03';
+        script.onload       = function() {
+            MauticSDK.onLoad();
+        };
+        head.appendChild(script);
+        var MauticDomain = 'http://crm.mathletics28.com';
+        var MauticLang   = {
+            'submittingMessage': "Please wait..."
+        }
+    } else if (typeof MauticSDK != 'undefined') {
+        MauticSDK.onLoad();
+    }
+  </script>
 </head>
 <body>
   <header>
@@ -17,31 +36,48 @@
     <p>This program compliments any curriculum by building speed and confidence in the fundamentals—addition, subtraction, multiplication, and division.</p>
     <p>Give your student the advantage of rapid-fire fluency. This is a compounding time saver.</p>
 
-    <form method="POST" action="http://crm.mathletics28.com/form/submit?formId=1" id="addition28-form">
-      <input type="text" name="mauticform[first_name]" placeholder="First Name" required>
-      <input type="text" name="mauticform[last_name]" placeholder="Last Name" required>
-      <input type="email" name="mauticform[email]" placeholder="Email Address" required>
+    <form id="mauticform_addition28freetrial" class="mauticform" action="http://crm.mathletics28.com/form/submit?formId=1" method="post" enctype="multipart/form-data">
+      <div class="mauticform-error" id="mauticform_addition28freetrial_error"></div>
+      <div class="mauticform-message" id="mauticform_addition28freetrial_message"></div>
+      <div class="mauticform-innerform">
 
-      <select name="mauticform[sport]" required>
-        <option value="" disabled selected>Select Your Sport</option>
-        <option value="Baseball">Baseball</option>
-        <option value="Football">Football</option>
-        <option value="Basketball">Basketball</option>
-        <option value="Hockey">Hockey</option>
-        <option value="Soccer">Soccer</option>
-        <option value="Tennis">Tennis</option>
-        <option value="Track and Field">Track and Field</option>
-      </select>
+        <div class="mauticform-row">
+          <input id="mauticform_input_addition28freetrial_first_name" name="mauticform[first_name]" value="" placeholder="First Name" type="text" />
+        </div>
 
-      <input type="hidden" name="mauticform[tags][]" value="TrialLead">
-      <input type="hidden" name="mauticform[tags][]" value="Addition28">
+        <div class="mauticform-row">
+          <input id="mauticform_input_addition28freetrial_last_name" name="mauticform[last_name]" value="" placeholder="Last Name" type="text" />
+        </div>
 
-      <button type="submit">Start Free Trial</button>
+        <div class="mauticform-row">
+          <input id="mauticform_input_addition28freetrial_email" name="mauticform[email]" value="" placeholder="Email Address" type="email" />
+        </div>
+
+        <div class="mauticform-row">
+          <select id="mauticform_input_addition28freetrial_sport" name="mauticform[sport]">
+            <option value="">Select Your Sport</option>
+            <option value="Baseball">Baseball</option>
+            <option value="Football">Football</option>
+            <option value="Basketball">Basketball</option>
+            <option value="Hockey">Hockey</option>
+            <option value="Soccer">Soccer</option>
+            <option value="Tennis">Tennis</option>
+            <option value="Track and Field">Track and Field</option>
+          </select>
+        </div>
+
+        <input type="hidden" name="mauticform[tags][]" value="TrialLead">
+        <input type="hidden" name="mauticform[tags][]" value="Addition28">
+
+        <div class="mauticform-row">
+          <button type="submit" name="mauticform[submit]" class="mauticform-button btn btn-default">Start Free Trial</button>
+        </div>
+
+      </div>
     </form>
 
     <div class="cta-buttons">
-      <button class="cta-button">Try 1 Day Free</button>
-      <button class="cta-button">Buy Full 28 Day Program</button>
+      <button class="cta-button">Check Out Now</button>
     </div>
   </section>
 
@@ -80,8 +116,6 @@
   </footer>
 </body>
 </html>
-
-
 
 
 
