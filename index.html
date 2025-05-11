@@ -7,21 +7,21 @@
   <link rel="stylesheet" href="style.css" />
   <script type="text/javascript">
     if (typeof MauticSDKLoaded == 'undefined') {
-        var MauticSDKLoaded = true;
-        var head            = document.getElementsByTagName('head')[0];
-        var script          = document.createElement('script');
-        script.type         = 'text/javascript';
-        script.src          = 'https://crm.mathletics28.com/media/js/mautic-form.js';
-        script.onload       = function() {
-            MauticSDK.onLoad();
-        };
-        head.appendChild(script);
-        var MauticDomain = 'https://crm.mathletics28.com';
-        var MauticLang   = {
-            'submittingMessage': "Please wait..."
-        }
-    } else if (typeof MauticSDK != 'undefined') {
+      var MauticSDKLoaded = true;
+      var head = document.getElementsByTagName('head')[0];
+      var script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.src = 'https://crm.mathletics28.com/media/js/mautic-form.js';
+      script.onload = function () {
         MauticSDK.onLoad();
+      };
+      head.appendChild(script);
+      var MauticDomain = 'https://crm.mathletics28.com';
+      var MauticLang = {
+        'submittingMessage': 'Please wait...'
+      };
+    } else if (typeof MauticSDK != 'undefined') {
+      MauticSDK.onLoad();
     }
   </script>
 </head>

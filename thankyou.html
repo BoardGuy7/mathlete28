@@ -3,59 +3,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Thank You - Mathletics 28</title>
+  <title>Thanks for Joining – Mathletics 28</title>
   <link rel="stylesheet" href="style.css" />
-  <script>
-    function getSportName() {
-      const urlParams = new URLSearchParams(window.location.search);
-      const sport = urlParams.get('sport');
-      const sportNames = {
-        baseball: "Baseball",
-        football: "Football",
-        basketball: "Basketball",
-        hockey: "Hockey",
-        track_and_field: "Track & Field",
-        tennis: "Tennis",
-        soccer: "Soccer"
-      };
-      return sportNames[sport] || "Your Sport";
-    }
-
-    window.onload = function () {
-      const sportHeader = document.getElementById("sport-title");
-      const sportDownload = document.getElementById("sport-download");
-      const sportName = getSportName();
-
-      sportHeader.innerText = `Thanks for joining the ${sportName} Challenge!`;
-      sportDownload.innerText = `Download Your ${sportName} Day 1 Pack`;
-      sportDownload.href = `/pdfs/${sportName.toLowerCase().replace(/ /g, '_')}_day1.pdf`;
-    };
-  </script>
 </head>
 <body>
+  <header>
+    <h1>Welcome to Mathletics 28!</h1>
+    <p class="tagline">Speed, confidence, and mastery — it all starts here.</p>
+  </header>
 
-<header>
-  <h1 id="sport-title">Thanks for joining the Challenge!</h1>
-  <p class="tagline">Let’s build speed, confidence, and math fluency — one drill at a time.</p>
-</header>
+  <section class="hero">
+    <h2>Your free trial is confirmed.</h2>
+    <p>We’re thrilled to have your student join the Mathletics 28 journey. Their personalized sports-themed drills will kickstart a new level of math fluency and confidence.</p>
+    <p>You’ll receive your Day 1 Pack shortly via email. The results you see after just a few days may surprise you.</p>
+    <blockquote>
+      “That which gets measured, will by sheer focus improve.”
+    </blockquote>
+  </section>
 
-<section class="hero">
-  <h2 id="sport-download">Download Your Day 1 Pack</h2>
-  <p>We’re excited to see your student in action. The journey ahead will be full of confidence boosts, measurable growth, and momentum in math. 
-  You’ve taken the first step — and the difference will be visible in just days.</p>
+  <section class="features">
+    <h3>What's Next?</h3>
+    <ul>
+      <li>🏁 Begin Day 1 of the Addition28 challenge</li>
+      <li>📈 Watch speed and accuracy improve daily</li>
+      <li>🤝 Join our Discord to connect with other parents and teachers</li>
+    </ul>
+  </section>
 
-  <div class="cta-buttons">
-    <a id="sport-download" class="cta-button" download>📥 Download Now</a>
-  </div>
-
-  <p style="margin-top: 2rem; font-style: italic; color: #ffaa66;">
-    “That which gets measured, will by sheer focus improve.”
-  </p>
-</section>
-
-<footer>
-  <p>© 2024 Mathletics 28 • <a href="mailto:support@mathletics28.com">support@mathletics28.com</a></p>
-</footer>
-
+  <footer>
+    <p>Join our <a href="#">community Discord</a> to share your journey. We turn feedback into rapid development.</p>
+    <p>© 2025 Mathletics 28 • support@mathletics28.com</p>
+  </footer>
 </body>
 </html>
