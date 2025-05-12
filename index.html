@@ -5,24 +5,130 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mathletics 28 – Master the Core 4</title>
   <link rel="stylesheet" href="style.css" />
-  <script type="text/javascript">
-    // Exit intent detection
+  <style>
+    /* Exit-intent popup styling */
+    #exit-popup {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      z-index: 9999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #exit-popup-content {
+      background: #fff;
+      padding: 2rem;
+      max-width: 500px;
+      width: 90%;
+      border-radius: 8px;
+      text-align: center;
+    }
+    #exit-popup-content .mauticform-row {
+      margin-bottom: 1rem;
+    }
+    #exit-popup-content .mauticform-input,
+    #exit-popup-content .mauticform-selectbox,
+    #exit-popup-content .mauticform-button {
+      width: 100%;
+      padding: 0.75rem;
+      box-sizing: border-box;
+    }
+    #exit-popup-content button.close-btn {
+      margin-top: 1rem;
+      background: none;
+      border: none;
+      color: #ff6600;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+  </style>
+  <script>
     let exitIntentShown = false;
-    document.addEventListener("mouseout", function (e) {
+    document.addEventListener('mouseout', function(e) {
       if (!exitIntentShown && e.clientY < 10) {
-        window.location.href = 'popup-trial.html';
+        openPopup();
         exitIntentShown = true;
       }
     });
+    function openPopup() {
+      document.getElementById('exit-popup').style.display = 'flex';
+    }
+    function closePopup() {
+      document.getElementById('exit-popup').style.display = 'none';
+    }
   </script>
 </head>
 <body>
+  <!-- Exit-intent popup with embedded trial form -->
+  <div id="exit-popup">
+    <div id="exit-popup-content">
+      <h2>Wait! Try a 1‑Day Free Trial</h2>
+      <p>Experience Mathletics 28 firsthand—time your student and yourself, engage, and improve.</p>
+      <div id="mauticform_wrapper_addition28popup" class="mauticform_wrapper">
+        <form autocomplete="false" role="form" method="post"
+          action="https://crm.mathletics28.com/form/submit?formId=3"
+          id="mauticform_addition28popup" data-mautic-form="addition28popup"
+          enctype="multipart/form-data">
+          <div class="mauticform-error" id="mauticform_addition28popup_error"></div>
+          <div class="mauticform-message" id="mauticform_addition28popup_message"></div>
+          <div class="mauticform-innerform">
+            <div class="mauticform-row">
+              <input type="text" name="mauticform[first_name]"
+                id="mauticform_input_addition28popup_first_name"
+                placeholder="First Name" required />
+            </div>
+            <div class="mauticform-row">
+              <input type="text" name="mauticform[last_name]"
+                id="mauticform_input_addition28popup_last_name"
+                placeholder="Last Name" required />
+            </div>
+            <div class="mauticform-row">
+              <input type="email" name="mauticform[email]"
+                id="mauticform_input_addition28popup_email"
+                placeholder="Email Address" required />
+            </div>
+            <div class="mauticform-row">
+              <select name="mauticform[sport]"
+                id="mauticform_input_addition28popup_sport" required>
+                <option value="">Select Your Sport</option>
+                <option>Baseball</option>
+                <option>Football</option>
+                <option>Basketball</option>
+                <option>Hockey</option>
+                <option>Soccer</option>
+                <option>Tennis</option>
+                <option>Track and Field</option>
+              </select>
+            </div>
+            <input type="hidden" name="mauticform[formId]" value="3" />
+            <input type="hidden" name="mauticform[return]"
+              value="https://mathletics28.com/thankyou.html" />
+            <input type="hidden" name="mauticform[formName]"
+              value="addition28popup" />
+            <div class="mauticform-row">
+              <button type="submit" name="mauticform[submit]"
+                class="mauticform-button">Start Free Trial</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <button class="close-btn" onclick="closePopup()">Not now</button>
+    </div>
+  </div>
+
   <header>
     <h1>Mathletics 28</h1>
     <p class="tagline">Where speed and confidence in math come to play</p>
     <div class="cta-priority">
-      <a class="cta-button main-cta" href="https://buymathletics28.lemonsqueezy.com/checkout/core-4-math-mastery-bundle" target="_blank">🎯 Join Now – Core 4 Bundle ($49.99)</a>
-      <p class="alt-option">Not ready yet? <a href="free-trial.html">Try 1 Day Free</a></p>
+      <a class="cta-button main-cta"
+        href="https://buymathletics28.lemonsqueezy.com/checkout/core-4-math-mastery-bundle"
+        target="_blank">🎯 Join Now – Core 4 Bundle ($49.99)</a>
+      <p class="alt-option">Not ready yet? <a href="#" onclick="openPopup(); return false;">Try 1‑Day Free</a></p>
     </div>
   </header>
 
