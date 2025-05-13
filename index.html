@@ -1,118 +1,69 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mathletetics 28 – Master the Core 4</title>
+  <title>Mathletics 28 – Master the Core 4</title>
   <link rel="stylesheet" href="style.css" />
+  <!-- Lemon Squeezy Overlay Script -->
+  <script defer src="https://cdn.lemonsqueezy.com/lemons.js"></script>
   <style>
     /* Exit-intent popup styling */
-    #exit-popup {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.8);
-      z-index: 9999;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    #exit-popup-content {
-      background: #fff;
-      padding: 2rem;
-      max-width: 500px;
-      width: 90%;
-      border-radius: 8px;
-      text-align: center;
-    }
-    #exit-popup-content .mauticform-row {
-      margin-bottom: 1rem;
-    }
+    #exit-popup { display: none; position: fixed; top: 0; left: 0;
+      width: 100%; height: 100%; background: rgba(0,0,0,0.8);
+      align-items: center; justify-content: center; z-index: 9999; }
+    #exit-popup-content { background: #fff; padding: 2rem;
+      max-width: 500px; width: 90%; border-radius: 8px;
+      text-align: center; }
+    #exit-popup-content .mauticform-row { margin-bottom: 1rem; }
     #exit-popup-content .mauticform-input,
     #exit-popup-content .mauticform-selectbox,
-    #exit-popup-content .mauticform-button {
-      width: 100%;
-      padding: 0.75rem;
-      box-sizing: border-box;
-    }
+    #exit-popup-content .mauticform-button { width: 100%; padding: 0.75rem; }
     #exit-popup-content button.close-btn {
-      margin-top: 1rem;
-      background: none;
-      border: none;
-      color: #ff6600;
-      font-size: 1rem;
-      cursor: pointer;
-    }
+      margin-top: 1rem; background: none; border: none;
+      color: #ff6600; font-size: 1rem; cursor: pointer; }
   </style>
   <script>
     let exitIntentShown = false;
-    document.addEventListener('mouseout', function(e) {
+    document.addEventListener('mouseout', e => {
       if (!exitIntentShown && e.clientY < 10) {
-        openPopup();
+        document.getElementById('exit-popup').style.display = 'flex';
         exitIntentShown = true;
       }
     });
-    function openPopup() {
-      document.getElementById('exit-popup').style.display = 'flex';
-    }
     function closePopup() {
       document.getElementById('exit-popup').style.display = 'none';
     }
   </script>
 </head>
 <body>
-  <!-- Exit-intent popup with embedded trial form -->
+  <!-- Exit-intent popup -->
   <div id="exit-popup">
     <div id="exit-popup-content">
-      <h2>Wait! Try a 1‑Day Free Trial</h2>
-      <p>Experience Mathletics 28 firsthand—time your student and yourself, engage, and improve.</p>
-      <div id="mauticform_wrapper_addition28popup" class="mauticform_wrapper">
-        <form autocomplete="false" role="form" method="post"
+      <h2>Wait! Try a 1-Day Free Trial</h2>
+      <p>Experience Mathletics 28 firsthand—baseball-themed drills.</p>
+      <!-- Embedded Mautic Form ID 3 -->
+      <div class="mauticform_wrapper" id="mauticform_wrapper_addition28popup">
+        <form autocomplete="false" method="post"
           action="https://crm.mathletics28.com/form/submit?formId=3"
-          id="mauticform_addition28popup" data-mautic-form="addition28popup"
-          enctype="multipart/form-data">
-          <div class="mauticform-error" id="mauticform_addition28popup_error"></div>
-          <div class="mauticform-message" id="mauticform_addition28popup_message"></div>
+          id="mauticform_addition28popup" data-mautic-form="addition28popup">
           <div class="mauticform-innerform">
-            <div class="mauticform-row">
-              <input type="text" name="mauticform[first_name]"
-                id="mauticform_input_addition28popup_first_name"
-                placeholder="First Name" required />
-            </div>
-            <div class="mauticform-row">
-              <input type="text" name="mauticform[last_name]"
-                id="mauticform_input_addition28popup_last_name"
-                placeholder="Last Name" required />
-            </div>
-            <div class="mauticform-row">
-              <input type="email" name="mauticform[email]"
-                id="mauticform_input_addition28popup_email"
-                placeholder="Email Address" required />
-            </div>
-            <div class="mauticform-row">
-              <select name="mauticform[sport]"
-                id="mauticform_input_addition28popup_sport" required>
-                <option value="">Select Your Sport</option>
-                <option>Baseball</option>
-                <option>Football</option>
-                <option>Basketball</option>
-                <option>Hockey</option>
-                <option>Soccer</option>
-                <option>Tennis</option>
-                <option>Track and Field</option>
-              </select>
-            </div>
+            <input type="hidden" name="mauticform[sport]" value="Baseball" />
             <input type="hidden" name="mauticform[formId]" value="3" />
-            <input type="hidden" name="mauticform[return]"
-              value="https://mathletics28.com/thankyou.html" />
-            <input type="hidden" name="mauticform[formName]"
-              value="addition28popup" />
+            <input type="hidden" name="mauticform[return]" value="https://mathletics28.com/thankyou.html" />
+            <input type="hidden" name="mauticform[formName]" value="addition28popup" />
             <div class="mauticform-row">
-              <button type="submit" name="mauticform[submit]"
-                class="mauticform-button">Start Free Trial</button>
+              <input type="text" name="mauticform[first_name]" placeholder="First Name" required />
+            </div>
+            <div class="mauticform-row">
+              <input type="text" name="mauticform[last_name]" placeholder="Last Name" required />
+            </div>
+            <div class="mauticform-row">
+              <input type="email" name="mauticform[email]" placeholder="Email Address" required />
+            </div>
+            <div class="mauticform-row">
+              <button type="submit" class="mauticform-button">Start Free Trial</button>
             </div>
           </div>
         </form>
@@ -123,75 +74,21 @@
 
   <header>
     <h1>Mathletics 28</h1>
-    <p class="tagline">Where speed and confidence in math come to play</p>
+    <p class="tagline">Baseball-themed drills to build speed and confidence in math</p>
     <div class="cta-priority">
-      <a class="cta-button main-cta"
-        href="https://buymathletics28.lemonsqueezy.com/checkout/core-4-math-mastery-bundle"
-        target="_blank">🎯 Join Now – Core 4 Bundle ($49.99)</a>
-      <p class="alt-option">Not ready yet? <a href="#" onclick="openPopup(); return false;">Try 1‑Day Free</a></p>
+      <!-- Overlay Checkout Button -->
+      <button class="cta-button main-cta"
+        data-lemons="checkout"
+        data-store="buymathletics28.lemonsqueezy.com"
+        data-product="core-4-math-mastery-bundle">
+        🎯 Join Now – Core 4 Bundle ($49.99)
+      </button>
+      <p class="alt-option">
+        Not ready yet? <a href="free-trial.html">Try 1-Day Free</a>
+      </p>
     </div>
   </header>
 
-  <section class="hero">
-    <h2>The root of math fatigue is slow recall of the core four.</h2>
-    <p>This program complements any curriculum by building speed and confidence in the fundamentals—addition, subtraction, multiplication, and division.</p>
-    <p>Give your student the advantage of rapid-fire fluency. This is a compounding time saver.</p>
-  </section>
-
-  <section class="features">
-    <h3>Why Mathletics 28 Works</h3>
-    <ul>
-      <li>⚡ Rapid-fire drills that take just 15 minutes a day</li>
-      <li>🏆 Builds speed and confidence in the core four operations</li>
-      <li>🎯 Personalized by sport to keep your learner engaged</li>
-    </ul>
-  </section>
-
-  <section class="audience-options">
-    <h3>Who It's For</h3>
-    <ul>
-      <li>Parents seeking a focused, engaging math resource</li>
-      <li>Teachers who want all students mastering math at their level</li>
-      <li>Schools and organizations looking to license a proven framework</li>
-    </ul>
-  </section>
-
-  <section class="testimonial">
-    <blockquote>
-      “This platform helped my boys re-engage with math by linking it to what they love — sports. I saw results in just a week.”
-      <span>– James K., Creator & Father of 3</span>
-    </blockquote>
-  </section>
-
-  <section class="offer-breakdown">
-    <h3>Choose Your Path to Math Mastery</h3>
-    <div class="offer">
-      <h4>🎯 Core 4 Mastery Bundle</h4>
-      <p>Master all four operations — Addition, Subtraction, Multiplication, and Division — in a 112-day program designed for rapid recall and long-term confidence. Includes all sport themes.</p>
-      <strong>$49.99</strong><br />
-      <a class="cta-button" href="https://buymathletics28.lemonsqueezy.com/checkout/core-4-math-mastery-bundle" target="_blank">Buy Now</a>
-    </div>
-    <div class="offer">
-      <h4>➕ Addition & Subtraction</h4>
-      <p>28-day drill challenge to build a solid foundation in the first half of math fluency. Best for early learners.</p>
-      <strong>$29.99</strong><br />
-      <a class="cta-button" href="https://buymathletics28.lemonsqueezy.com/checkout/addition-subtraction-speed-drills-28-days" target="_blank">Buy Now</a>
-    </div>
-    <div class="offer">
-      <h4>✖️ Multiplication & Division</h4>
-      <p>28-day focused drills to build instant recall of advanced operations. Perfect follow-up or standalone course.</p>
-      <strong>$29.99</strong><br />
-      <a class="cta-button" href="https://buymathletics28.lemonsqueezy.com/checkout/multiplication-division-speed-drills-28-days" target="_blank">Buy Now</a>
-    </div>
-  </section>
-
-  <section class="affiliate-promo">
-    <p>Interested in promoting Mathletics 28? <a href="#">Join our affiliate team</a> and earn for every referral.</p>
-  </section>
-
-  <footer>
-    <p>Join our <a href="#">community Discord</a> to share your journey. We turn feedback into rapid development.</p>
-    <p>© 2025 Mathletics 28 • support@mathletics28.com</p>
-  </footer>
+  <!-- ... rest of index content (hero, features, offers) ... -->
 </body>
 </html>

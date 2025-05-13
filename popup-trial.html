@@ -1,3 +1,4 @@
+<!-- popup-trial.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,94 +6,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Popup Trial – Mathletics 28</title>
   <link rel="stylesheet" href="style.css" />
-  <script type="text/javascript">
-    if (typeof MauticSDKLoaded == 'undefined') {
-      var MauticSDKLoaded = true;
-      var head   = document.getElementsByTagName('head')[0];
-      var script = document.createElement('script');
-      script.type    = 'text/javascript';
-      script.src     = 'https://crm.mathletics28.com/media/js/mautic-form.js';
-      script.onload  = function() { MauticSDK.onLoad(); };
-      head.appendChild(script);
-      var MauticDomain = 'https://crm.mathletics28.com';
-      var MauticLang   = { submittingMessage: 'Please wait...' };
-    } else if (typeof MauticSDK != 'undefined') {
-      MauticSDK.onLoad();
-    }
-  </script>
+  <script defer src="https://cdn.lemonsqueezy.com/lemons.js"></script>
 </head>
 <body>
   <header>
-    <h1>Special Popup Trial — 1-Day Free</h1>
-    <p class="tagline">Exclusive page to capture exit-intent leads. Engage now!</p>
+    <h1>1-Day Free Trial</h1>
+    <p class="tagline">Discover baseball-themed math drills in minutes.</p>
   </header>
-
   <section id="popup-signup">
-    <p>⏱️ Time the 1-day drill for your student and yourself. See the core-4 boost.</p>
-    <div id="mauticform_wrapper_addition28popup" class="mauticform_wrapper">
-      <form autocomplete="false" role="form" method="post"
+    <!-- Embedded Mautic Form ID 3 -->
+    <div class="mauticform_wrapper" id="mauticform_wrapper_addition28popup">
+      <form autocomplete="false" method="post"
         action="https://crm.mathletics28.com/form/submit?formId=3"
-        id="mauticform_addition28popup" data-mautic-form="addition28popup"
-        enctype="multipart/form-data">
-        <div class="mauticform-error"   id="mauticform_addition28popup_error"></div>
-        <div class="mauticform-message" id="mauticform_addition28popup_message"></div>
+        id="mauticform_addition28popup" data-mautic-form="addition28popup">
         <div class="mauticform-innerform">
-
+          <input type="hidden" name="mauticform[sport]" value="Baseball" />
+          <input type="hidden" name="mauticform[formId]" value="3" />
+          <input type="hidden" name="mauticform[return]" value="https://mathletics28.com/thankyou.html" />
+          <input type="hidden" name="mauticform[formName]" value="addition28popup" />
           <div class="mauticform-row">
-            <input type="text"
-                   name="mauticform[first_name]"
-                   id="mauticform_input_addition28popup_first_name"
-                   placeholder="First Name" required />
+            <input type="text" name="mauticform[first_name]" placeholder="First Name" required />
           </div>
-
           <div class="mauticform-row">
-            <input type="text"
-                   name="mauticform[last_name]"
-                   id="mauticform_input_addition28popup_last_name"
-                   placeholder="Last Name" required />
+            <input type="text" name="mauticform[last_name]" placeholder="Last Name" required />
           </div>
-
           <div class="mauticform-row">
-            <input type="email"
-                   name="mauticform[email]"
-                   id="mauticform_input_addition28popup_email"
-                   placeholder="Email Address" required />
+            <input type="email" name="mauticform[email]" placeholder="Email Address" required />
           </div>
-
           <div class="mauticform-row">
-            <select name="mauticform[sport]"
-                    id="mauticform_input_addition28popup_sport"
-                    required>
-              <option value="">Select Your Sport</option>
-              <option>Baseball</option>
-              <option>Football</option>
-              <option>Basketball</option>
-              <option>Hockey</option>
-              <option>Soccer</option>
-              <option>Tennis</option>
-              <option>Track and Field</option>
-            </select>
-          </div>
-
-          <input type="hidden"
-                 name="mauticform[formId]"
-                 value="3" />
-          <input type="hidden"
-                 name="mauticform[return]"
-                 value="https://mathletics28.com/thankyou.html" />
-          <input type="hidden"
-                 name="mauticform[formName]"
-                 value="addition28popup" />
-
-          <div class="mauticform-row">
-            <button type="submit"
-                    name="mauticform[submit]">Start Free Trial</button>
+            <button type="submit" class="mauticform-button">Start Free Trial</button>
           </div>
         </div>
       </form>
     </div>
   </section>
-
   <footer>
     <p><a href="index.html">← Back to Home</a></p>
   </footer>
