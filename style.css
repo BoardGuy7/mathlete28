@@ -1,155 +1,191 @@
-/* Global Styles */
-body {
+/* Mathletics28.com CSS - Baseball-Themed Styling */
+/* Optimized for Namecheap hosting, VS Code editing, Render deployment */
+
+/* Root Variables for Brand Colors */
+:root {
+  --baseball-blue: #1B3C73;
+  --diamond-green: #2E7D32;
+  --red-stitching: #D32F2F;
+  --off-white: #ECEFF1;
+  --charcoal-gray: #333333;
+}
+
+/* Reset and Base Styles */
+* {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
-  color: #000;
-  background-color: #fff;
-  text-align: center;
+  box-sizing: border-box;
 }
 
-header, section, footer {
-  padding: 2rem 1rem;
-  max-width: 800px;
-  margin: 0 auto;
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--off-white);
+  color: var(--charcoal-gray);
+  line-height: 1.4;
+  font-size: 16px;
 }
 
-a {
-  color: #ff6600;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #000;
-}
-
-/* Headings */
-h1, h2, h3, h4 {
-  color: #ff6600;
-  margin-bottom: 1rem;
-}
-
-p, li {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  margin-bottom: 1rem;
-}
-
-/* Buttons */
-.cta-button, .mauticform-button {
-  display: inline-block;
-  background-color: #000;
-  color: #ff6600;
-  padding: 0.75rem 1.5rem;
-  font-size: 1.2rem;
-  font-weight: bold;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.cta-button:hover, .mauticform-button:hover {
-  background-color: #ff6600;
-  color: #000;
-}
-
-/* Hero Section */
-.hero {
-  background-color: #f7f7f7;
-  padding: 2rem;
-  margin-bottom: 2rem;
-}
-
-/* Features & Lists */
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-li {
-  margin-bottom: 0.5rem;
-}
-
-li::before {
-  content: '✔️';
-  margin-right: 0.5rem;
-}
-
-/* Offer Breakdown */
-.offer-breakdown {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-  margin-bottom: 2rem;
-}
-
-@media (min-width: 768px) {
-  .offer-breakdown {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-.offer {
-  border: 2px solid #000;
-  border-radius: 8px;
-  padding: 1.5rem;
-  text-align: center;
-}
-
-.offer h4 {
-  margin-bottom: 0.5rem;
-}
-
-.offer strong {
-  display: block;
-  font-size: 1.5rem;
-  margin: 1rem 0;
-}
-
-/* Exit-Intent Popup */
-#exit-popup {
-  display: none;
+/* Diamond Grid Background (Subtle) */
+body::before {
+  content: '';
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
+  background-image: url('/static/diamond-grid.png'); /* Render static folder path */
+  background-size: 300px;
+  opacity: 0.1;
+  z-index: -1;
 }
 
-#exit-popup-content {
-  background: #fff;
-  padding: 2rem;
-  width: 90%;
-  max-width: 500px;
-  border-radius: 8px;
+/* Header */
+header {
+  background-color: var(--baseball-blue);
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 4px solid var(--red-stitching);
+}
+
+header .logo img {
+  width: 150px; /* 1000px PNG/SVG scaled */
+  height: auto;
+}
+
+/* Typography */
+h1 {
+  font-family: 'Bungee', sans-serif;
+  font-size: 28px;
+  color: var(--baseball-blue);
+  text-transform: uppercase;
+  margin: 1rem 0;
   text-align: center;
 }
 
-#exit-popup-content .mauticform-row {
-  margin-bottom: 1rem;
+h2 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  color: var(--charcoal-gray);
+  margin: 0.75rem 0;
 }
 
-/* Forms */
-.mauticform-input,
-.mauticform-selectbox,
-.mauticform-button {
+p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: var(--charcoal-gray);
+  margin: 0.5rem 0;
+}
+
+.hero-text {
+  font-family: 'Bungee', sans-serif;
+  font-size: 36px;
+  color: var(--red-stitching);
+  text-align: center;
+  margin: 2rem 0;
+}
+
+/* Hero Section */
+.hero {
+  background: url('/static/hero-kid-baseball.png') no-repeat center/cover; /* Render path */
+  padding: 4rem 1rem;
+  text-align: center;
+  border-bottom: 2px dashed var(--red-stitching);
+}
+
+.hero .cta-button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: var(--red-stitching);
+  color: var(--off-white);
+  text-decoration: none;
+  font-family: 'Bungee', sans-serif;
+  font-size: 18px;
+  border: 2px solid var(--baseball-blue);
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.hero .cta-button:hover {
+  background-color: var(--diamond-green);
+  border-color: var(--red-stitching);
+}
+
+/* Main Content */
+main {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.product-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.product-card {
+  background-color: var(--off-white);
+  border: 2px solid var(--diamond-green);
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  max-width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
   width: 100%;
-  padding: 0.75rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-bottom: 1rem;
+  height: auto;
+  border-bottom: 2px solid var(--red-stitching);
+}
+
+.product-card .buy-button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--baseball-blue);
+  color: var(--off-white);
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.product-card .buy-button:hover {
+  background-color: var(--red-stitching);
 }
 
 /* Footer */
 footer {
-  font-size: 0.9rem;
-  color: #666;
-  margin-top: 2rem;
+  background-color: var(--baseball-blue);
+  color: var(--off-white);
+  text-align: center;
+  padding: 1rem;
+  border-top: 4px solid var(--red-stitching);
 }
+
+footer p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  .hero-text {
+    font-size: 28px;
+  }
+
+  .product-card {
+    max-width: 100%;
+  }
+}
+
+/* Note: Minify CSS for Render deployment (e.g., use VS Code extension 'Minify') */

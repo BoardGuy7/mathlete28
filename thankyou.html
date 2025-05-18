@@ -1,128 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mathletics 28 – Master the Core 4</title>
-  <link rel="stylesheet" href="style.css" />
-  <script type="text/javascript">
-    // Exit intent detection
-    let exitIntentShown = false;
-    document.addEventListener("mouseout", function (e) {
-      if (!exitIntentShown && e.clientY < 10) {
-        document.getElementById("exit-popup").style.display = "block";
-        exitIntentShown = true;
-      }
-    });
-    function closePopup() {
-      document.getElementById("exit-popup").style.display = "none";
-    }
-  </script>
-  <style>
-    #exit-popup {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  z-index: 9999;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-    #exit-popup-content {
-      background: white;
-      padding: 2rem;
-      max-width: 500px;
-      text-align: center;
-      border-radius: 8px;
-    }
-    #exit-popup-content button {
-      margin-top: 1rem;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mathletics28 - Thank You!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-  <div id="exit-popup">
-    <div id="exit-popup-content">
-      <h2>Wait! Want to try before you buy?</h2>
-      <p>Grab your free 1-day trial and experience Mathletics 28 firsthand.</p>
-      <a href="https://crm.mathletics28.com/form/submit?formId=3" class="cta-button" target="_blank">Try 1 Day Free</a><br />
-      <button onclick="closePopup()">No thanks</button>
-    </div>
-  </div>
-
   <header>
-    <h1>Mathletics 28</h1>
-    <p class="tagline">Where speed and confidence in math come to play</p>
-    <div class="cta-priority">
-      <a class="cta-button main-cta" href="https://buymathletics28.lemonsqueezy.com/checkout/core-4-math-mastery-bundle" target="_blank">🎯 Join Now – Core 4 Bundle ($49.99)</a>
-      <p class="alt-option">Not ready yet? <a href="https://crm.mathletics28.com/form/submit?formId=2" target="_blank">Try 1 Day Free</a></p>
+    <div class="logo">
+      <img src="/static/mathletics28-logo.svg" alt="Mathletics28 Logo">
     </div>
   </header>
 
-  <section class="hero">
-    <h2>The root of math fatigue is slow recall of the core four.</h2>
-    <p>This program complements any curriculum by building speed and confidence in the fundamentals—addition, subtraction, multiplication, and division.</p>
-    <p>Give your student the advantage of rapid-fire fluency. This is a compounding time saver.</p>
-  </section>
-
-  <section class="features">
-    <h3>Why Mathletics 28 Works</h3>
-    <ul>
-      <li>⚡ Rapid-fire drills that take just 15 minutes a day</li>
-      <li>🏆 Builds speed and confidence in the core four operations</li>
-      <li>🎯 Personalized by sport to keep your learner engaged</li>
-    </ul>
-  </section>
-
-  <section class="audience-options">
-    <h3>Who It's For</h3>
-    <ul>
-      <li>Parents seeking a focused, engaging math resource</li>
-      <li>Teachers who want all students mastering math at their level</li>
-      <li>Schools and organizations looking to license a proven framework</li>
-    </ul>
-  </section>
-
-  <section class="testimonial">
-    <blockquote>
-      “This platform helped my boys re-engage with math by linking it to what they love — sports. I saw results in just a week.”
-      <span>– James K., Creator & Father of 3</span>
-    </blockquote>
-  </section>
-
-  <section class="offer-breakdown">
-    <h3>Choose Your Path to Math Mastery</h3>
-    <div class="offer">
-      <h4>🎯 Core 4 Mastery Bundle</h4>
-      <p>Master all four operations — Addition, Subtraction, Multiplication, and Division — in a 112-day program designed for rapid recall and long-term confidence. Includes all sport themes.</p>
-      <strong>$49.99</strong><br />
-      <a class="cta-button" href="https://buymathletics28.lemonsqueezy.com/checkout/core-4-math-mastery-bundle" target="_blank">Buy Now</a>
-    </div>
-    <div class="offer">
-      <h4>➕ Addition & Subtraction</h4>
-      <p>28-day drill challenge to build a solid foundation in the first half of math fluency. Best for early learners.</p>
-      <strong>$29.99</strong><br />
-      <a class="cta-button" href="https://buymathletics28.lemonsqueezy.com/checkout/addition-subtraction-speed-drills-28-days" target="_blank">Buy Now</a>
-    </div>
-    <div class="offer">
-      <h4>✖️ Multiplication & Division</h4>
-      <p>28-day focused drills to build instant recall of advanced operations. Perfect follow-up or standalone course.</p>
-      <strong>$29.99</strong><br />
-      <a class="cta-button" href="https://buymathletics28.lemonsqueezy.com/checkout/multiplication-division-speed-drills-28-days" target="_blank">Buy Now</a>
-    </div>
-  </section>
-
-  <section class="affiliate-promo">
-    <p>Interested in promoting Mathletics 28? <a href="#">Join our affiliate team</a> and earn for every referral.</p>
-  </section>
+  <main>
+    <section class="tryout-section">
+      <h1>You're on the Team!</h1>
+      <p>Thanks for joining the Mathletics28 Tryout! Check your email for free drills.</p>
+      <p>Ready to crush math? Grab our workbooks now!</p>
+      <a href="/index.html#products" class="cta-button">Shop Workbooks</a>
+    </section>
+  </main>
 
   <footer>
-    <p>Join our <a href="#">community Discord</a> to share your journey. We turn feedback into rapid development.</p>
-    <p>© 2025 Mathletics 28 • support@mathletics28.com</p>
+    <p>&copy; 2025 Mathletics28.com. All rights reserved.</p>
   </footer>
 </body>
 </html>

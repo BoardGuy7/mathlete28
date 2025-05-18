@@ -1,94 +1,56 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mathletics 28 – Master the Core 4</title>
-  <link rel="stylesheet" href="style.css" />
-  <!-- Lemon Squeezy Overlay Script -->
-  <script defer src="https://cdn.lemonsqueezy.com/lemons.js"></script>
-  <style>
-    /* Exit-intent popup styling */
-    #exit-popup { display: none; position: fixed; top: 0; left: 0;
-      width: 100%; height: 100%; background: rgba(0,0,0,0.8);
-      align-items: center; justify-content: center; z-index: 9999; }
-    #exit-popup-content { background: #fff; padding: 2rem;
-      max-width: 500px; width: 90%; border-radius: 8px;
-      text-align: center; }
-    #exit-popup-content .mauticform-row { margin-bottom: 1rem; }
-    #exit-popup-content .mauticform-input,
-    #exit-popup-content .mauticform-selectbox,
-    #exit-popup-content .mauticform-button { width: 100%; padding: 0.75rem; }
-    #exit-popup-content button.close-btn {
-      margin-top: 1rem; background: none; border: none;
-      color: #ff6600; font-size: 1rem; cursor: pointer; }
-  </style>
-  <script>
-    let exitIntentShown = false;
-    document.addEventListener('mouseout', e => {
-      if (!exitIntentShown && e.clientY < 10) {
-        document.getElementById('exit-popup').style.display = 'flex';
-        exitIntentShown = true;
-      }
-    });
-    function closePopup() {
-      document.getElementById('exit-popup').style.display = 'none';
-    }
-  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mathletics28 - Crush Math with Baseball Flair!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-  <!-- Exit-intent popup -->
-  <div id="exit-popup">
-    <div id="exit-popup-content">
-      <h2>Wait! Try a 1-Day Free Trial</h2>
-      <p>Experience Mathletics 28 firsthand—baseball-themed drills.</p>
-      <!-- Embedded Mautic Form ID 3 -->
-      <div class="mauticform_wrapper" id="mauticform_wrapper_addition28popup">
-        <form autocomplete="false" method="post"
-          action="https://crm.mathletics28.com/form/submit?formId=3"
-          id="mauticform_addition28popup" data-mautic-form="addition28popup">
-          <div class="mauticform-innerform">
-            <input type="hidden" name="mauticform[sport]" value="Baseball" />
-            <input type="hidden" name="mauticform[formId]" value="3" />
-            <input type="hidden" name="mauticform[return]" value="https://mathletics28.com/thankyou.html" />
-            <input type="hidden" name="mauticform[formName]" value="addition28popup" />
-            <div class="mauticform-row">
-              <input type="text" name="mauticform[first_name]" placeholder="First Name" required />
-            </div>
-            <div class="mauticform-row">
-              <input type="text" name="mauticform[last_name]" placeholder="Last Name" required />
-            </div>
-            <div class="mauticform-row">
-              <input type="email" name="mauticform[email]" placeholder="Email Address" required />
-            </div>
-            <div class="mauticform-row">
-              <button type="submit" class="mauticform-button">Start Free Trial</button>
-            </div>
-          </div>
-        </form>
-      </div>
-      <button class="close-btn" onclick="closePopup()">Not now</button>
-    </div>
-  </div>
-
   <header>
-    <h1>Mathletics 28</h1>
-    <p class="tagline">Baseball-themed drills to build speed and confidence in math</p>
-    <div class="cta-priority">
-      <!-- Overlay Checkout Button -->
-      <button class="cta-button main-cta"
-        data-lemons="checkout"
-        data-store="buymathletics28.lemonsqueezy.com"
-        data-product="core-4-math-mastery-bundle">
-        🎯 Join Now – Core 4 Bundle ($49.99)
-      </button>
-      <p class="alt-option">
-        Not ready yet? <a href="free-trial.html">Try 1-Day Free</a>
-      </p>
+    <div class="logo">
+      <img src="/static/mathletics28-logo.svg" alt="Mathletics28 Logo">
     </div>
   </header>
 
-  <!-- ... rest of index content (hero, features, offers) ... -->
+  <section class="hero">
+    <h1 class="hero-text">Crush Math with Baseball Flair!</h1>
+    <p>Fun, baseball-themed math drills for kids 6-12.</p>
+    <a href="#products" class="cta-button">Shop Now!</a>
+  </section>
+
+  <main>
+    <section class="product-section" id="products">
+      <div class="product-card">
+        <img src="/static/addition-subtraction-cover.png" alt="Addition/Subtraction Workbook">
+        <h2>Addition/Subtraction Workbook</h2>
+        <p>Master plus and minus with baseball drills! ($28)</p>
+        <a href="#buy-addition" class="buy-button">Buy Now</a>
+      </div>
+      <div class="product-card">
+        <img src="/static/multiplication-division-cover.png" alt="Multiplication/Division Workbook">
+        <h2>Multiplication/Division Workbook</h2>
+        <p>Hit home runs with times and divide! ($28)</p>
+        <a href="#buy-multiplication" class="buy-button">Buy Now</a>
+      </div>
+      <div class="product-card">
+        <img src="/static/full-bundle-cover.png" alt="Full Bundle">
+        <h2>Full Bundle</h2>
+        <p>Get both workbooks and save! ($49.99)</p>
+        <a href="#buy-bundle" class="buy-button">Buy Now</a>
+      </div>
+    </section>
+
+    <section class="tryout-section">
+      <h1>Join the Mathletics28 Tryout!</h1>
+      <p>Sign up for free drills and updates to start your math journey.</p>
+      <a href="/free-trial.html" class="cta-button">Join the Tryout!</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Mathletics28.com. All rights reserved.</p>
+  </footer>
 </body>
 </html>
