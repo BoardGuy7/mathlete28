@@ -1,6 +1,9 @@
 /* Mathletics28.com CSS - Baseball-Themed Styling */
 /* Optimized for Namecheap hosting, VS Code editing, Render deployment */
 
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Roboto:wght@400;700&display=swap');
+
 /* Root Variables for Brand Colors */
 :root {
   --baseball-blue: #1B3C73;
@@ -33,7 +36,7 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('/static/diamond-grid.png'); /* Render static folder path */
+  background-image: url('/static/diamond-grid.png');
   background-size: 300px;
   opacity: 0.1;
   z-index: -1;
@@ -48,7 +51,7 @@ header {
 }
 
 header .logo img {
-  width: 150px; /* 1000px PNG/SVG scaled */
+  width: 150px;
   height: auto;
 }
 
@@ -87,7 +90,7 @@ p {
 
 /* Hero Section */
 .hero {
-  background: url('/static/hero-kid-baseball.png') no-repeat center/cover; /* Render path */
+  background: url('/static/hero-kid-baseball.png') no-repeat center/cover;
   padding: 4rem 1rem;
   text-align: center;
   border-bottom: 2px dashed var(--red-stitching);
@@ -187,5 +190,3 @@ footer p {
     max-width: 100%;
   }
 }
-
-/* Note: Minify CSS for Render deployment (e.g., use VS Code extension 'Minify') */
